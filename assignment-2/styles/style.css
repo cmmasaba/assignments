@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    min-height: 100vh;
+    padding-top: 3%;
+    background-color: #ffe4e6; /* Light pink background */
+    color: #181a1a;
+}
+
+h1 {
+    font-size: 2.5rem; /* Increased size for aesthetic appeal */
+    margin-bottom: 1rem;
+    color: #c82333; /* Aesthetic dark red color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adding a shadow for effect */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    background-color: #f8d7da; /* Light pinkish-red for list items */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #181a1a;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 80%; /* Reduced size of input form */
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: #f8d7da; /* Match input background to list items */
+    color: #181a1a;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: #c82333; /* Red background to match aesthetics */
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Styling for delete button */
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+    margin-left: auto;
+}
+
+.btn-outline-danger:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}

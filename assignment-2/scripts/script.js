@@ -1,26 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var submit_button = document.getElementById("submit");
-    var new_task = document.getElementById("task");
-    var tasks_list = document.getElementById("tasks");
+    let submission = document.getElementById("submit");
+    let new_task = document.getElementById("task");
+    let tasks_list = document.getElementById("tasks_list");
 
-    submit_button.disabled = true;
+    submission.disabled = true;
 
     new_task.addEventListener("input", function () {
-        submit_button.disabled = !new_task.value.trim();
+        submission.disabled = !new_task.value.trim();
     });
 
-    document.querySelector("form").addEventListener("submit", function () {
-        var new_tasks_value = new_task.value.trim();
+    document.getElementById("task-form").addEventListener("submit", function () {
+        let new_tasks_value = new_task.value.trim();
 
         if (new_tasks_value !== "") {
-            var tasks_list_item = document.createElement("li");
+            let tasks_list_item = document.createElement("li");
             tasks_list_item.textContent = new_tasks_value;
 
             tasks_list.appendChild(tasks_list_item);
 
             new_task.value = "";
 
-            submit_button.disabled = true;
+            submission.disabled = true;
         }
 
         return false;
